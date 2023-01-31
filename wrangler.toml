@@ -1,0 +1,7 @@
+name = "renotion"
+main = "src/index.js"
+compatibility_date = "2023-01-30"
+
+kv_namespaces = [
+    { binding = "RENOTION", id = "7136c98f876049d681b175324c571f8d", preview_id = "410f5fcd6e3846da887a6aa43f06372a" }
+]

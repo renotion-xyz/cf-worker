@@ -1,0 +1,17 @@
+{
+  "name": "renotion",
+  "version": "0.0.0",
+  "devDependencies": {
+    "wrangler": "2.8.1"
+  },
+  "private": true,
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler publish"
+  },
+  "dependencies": {
+    "@ethersproject/abi": "^5.7.0",
+    "@ethersproject/keccak256": "^5.7.0",
+    "@ethersproject/strings": "^5.7.0"
+  }
+}
