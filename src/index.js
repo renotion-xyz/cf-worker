@@ -101,6 +101,7 @@ class BodyRewriter {
 
   element(element) {
     element.append(`
+    <div style="display: none;">Powered by renotion.xyz</div>
     <script>
     window.CONFIG.domainBaseUrl = 'https://${this.domain}';
     const SLUG_TO_PAGE = ${JSON.stringify(this.slugToPage)};
