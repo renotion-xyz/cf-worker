@@ -2,6 +2,7 @@ import { toUtf8Bytes } from "@ethersproject/strings";
 import { keccak256 } from "@ethersproject/keccak256";
 import { defaultAbiCoder } from "@ethersproject/abi";
 
+// Accessing smart contract https://github.com/renotion-xyz/contracts
 const RPC_URL = "https://polygon-rpc.com/";
 const CONTRACT_ADDRESS = "0xD189E333277a8dbd65244A97bE3ecBE4f7Bee5cf";
 
@@ -213,8 +214,7 @@ async function appendJavascript(res, domain, slugToPage, title, description) {
 }
 
 async function fetchMappedDomainPage(domain) {
-  console.log(`fetchMappedDomainPage ${domain}`);
-
+  // https://github.com/renotion-xyz/contracts/blob/main/contracts/RenotionToken.sol#L69
   const domainHash = keccak256(toUtf8Bytes(domain));
 
   const selector = "221defb1";
@@ -250,7 +250,6 @@ async function fetchMappedDomainPage(domain) {
 }
 
 async function getMappedDomainPage(domain, env) {
-  console.log("getMappedDomainPage");
   const cached = await env.RENOTION.get(`domain:${domain}`);
   if (cached) {
     return cached;
